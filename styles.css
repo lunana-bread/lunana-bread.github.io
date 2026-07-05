@@ -1,0 +1,7 @@
+body{
+    background-image: url(images/wall0.png);
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+}
