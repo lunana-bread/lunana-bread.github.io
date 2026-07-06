@@ -15,19 +15,62 @@ body{
     flex: 1;
     flex-direction: column;
     gap: 10px;
+    min-width: 0;
 }
 
 .content{
+    gap: 10px;
     border: 1px solid rgba(255, 255, 255, 0.5);
     flex: 1;
     backdrop-filter: blur(10px);
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
+    transition: scale 0.3s ease,
+                backdrop-filter 0.4s ease,
+                background-color 0.4s ease,
+                border-radius 0.2s ease;
+    padding: 10px;
+}
+
+.content-inside{
+    gap: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    flex: 1;
+    color: white;
+    transition: scale 0.3s ease,
+                background-color 0.4s ease,
+                border-radius 0.2s ease;
+    padding: 10px;
+}
+
+.content-inside:hover{
+    scale: 1.03;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.content:hover{
+    scale: 1.03;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+}
+
+.small{
+    flex: 0;
+    display: flex;
+    min-height: 15%;
+}
+
+.pfp{
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    aspect-ratio: 1/1;
     transition: scale 0.3s ease,
                 border-radius 0.2s ease;
 }
 
-.content:hover{
+.pfp:hover{
     scale: 1.03;
     border-radius: 10px;
 }
