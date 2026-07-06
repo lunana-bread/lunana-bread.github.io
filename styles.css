@@ -23,4 +23,11 @@ body{
     backdrop-filter: blur(10px);
     background-color: rgba(0, 0, 0, 0.6);
     color: white;
+    transition: scale 0.3s ease,
+                border-radius 0.2s ease;
+}
+
+.content:hover{
+    scale: 1.03;
+    border-radius: 10px;
 }
