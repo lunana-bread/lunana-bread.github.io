@@ -21,6 +21,13 @@ body{
     min-width: 0;
 }
 
+.container-link{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 0;
+}
+
 .container-row{
     display: flex;
     flex: 1;
@@ -224,12 +231,12 @@ body{
     width: 15%;
 }
 
-.squirrel{
+.website-button{
     transition: scale 0.3s ease,
                 border-radius 0.2s ease;
 }
 
-.squirrel:hover{
+.website-button:hover{
     scale: 1.1;
     border-radius: 10px;
 }
