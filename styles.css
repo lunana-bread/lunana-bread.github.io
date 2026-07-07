@@ -44,8 +44,8 @@ body{
 
 .content-inside{
     gap: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
     flex: 1;
+    border: 1px solid rgba(255, 255, 255, 0.5);
     color: white;
     transition: scale 0.3s ease,
                 background-color 0.4s ease,
@@ -55,9 +55,32 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-width: 0;
 }
 
 .content-inside:hover{
+    scale: 1.015;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.content-inside-title{
+    gap: 5px;
+    flex: 0;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: white;
+    transition: scale 0.3s ease,
+                background-color 0.4s ease,
+                border-radius 0.2s ease;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+}
+
+.content-inside-title:hover{
     scale: 1.015;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
@@ -74,6 +97,11 @@ body{
     flex: 0;
     display: flex;
     min-height: 15%;
+}
+
+.links{
+    flex: 1;
+    display: flex;
 }
 
 .medium{
@@ -126,12 +154,15 @@ body{
 }
 
 .screenshot{
+    aspect-ratio: 16/9;
     object-fit: cover;
-    width: 100%;
+    flex: 1;
     border: 1px solid rgba(255, 255, 255, 0.5);
     transition: scale 0.3s ease,
                 border-radius 0.2s ease;
     box-sizing: border-box;
+    min-width: 0;
+    min-height: 0;
 }
 
 .screenshot:hover{
@@ -166,7 +197,39 @@ body{
     border-radius: 10px;
 }
 
+.content-inside-swagsocial{
+    gap: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(52, 48, 58, 0.5);
+    flex: 1;
+    color: white;
+    transition: scale 0.3s ease,
+                background-color 0.4s ease,
+                border-radius 0.2s ease;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-inside-swagsocial:hover{
+    scale: 1.015;
+    background-color: rgba(52, 48, 58, 0.7);
+    border-radius: 10px;
+}
+
 .discord{
     min-width: 0;
     width: 15%;
+}
+
+.squirrel{
+    transition: scale 0.3s ease,
+                border-radius 0.2s ease;
+}
+
+.squirrel:hover{
+    scale: 1.1;
+    border-radius: 10px;
 }
