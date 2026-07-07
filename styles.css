@@ -112,6 +112,7 @@ body{
 }
 
 .text{
+    text-decoration: none;
     font-family: Kode Mono, sans-serif;
     margin: 0;
     font-size: clamp(0.5vw, 0.75vw, 20px);
@@ -135,4 +136,36 @@ body{
 .screenshot:hover{
     scale: 1.02;
     border-radius: 10px;
+}
+
+.link{
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.content-inside-discord{
+    gap: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(88, 101, 242, 0.5);
+    flex: 1;
+    color: white;
+    transition: scale 0.3s ease,
+                background-color 0.4s ease,
+                border-radius 0.2s ease;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-inside-discord:hover{
+    scale: 1.015;
+    background-color: rgba(88, 101, 242, 0.7);
+    border-radius: 10px;
+}
+
+.discord{
+    min-width: 0;
+    width: 15%;
 }
