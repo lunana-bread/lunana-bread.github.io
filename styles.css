@@ -2,7 +2,7 @@
 
 body{
     margin: 0;
-    background-image: url(images/wall0.png);
+    background-image: url(images/wall1.png);
     display: flex;
     width: 100vw;
     height: 100vh;
@@ -57,7 +57,7 @@ body{
 }
 
 .content-inside:hover{
-    scale: 1.03;
+    scale: 1.015;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
 }
@@ -79,7 +79,6 @@ body{
     flex: 0;
     display: flex;
     flex-direction: column;
-    min-height: 20%;
 }
 
 .pfp-main{
@@ -122,4 +121,18 @@ body{
     font-family: Kode Mono, sans-serif;
     margin: 0;
     font-size: clamp(1vw, 2vw, 30px);
+}
+
+.screenshot{
+    object-fit: cover;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: scale 0.3s ease,
+                border-radius 0.2s ease;
+    box-sizing: border-box;
+}
+
+.screenshot:hover{
+    scale: 1.02;
+    border-radius: 10px;
 }
