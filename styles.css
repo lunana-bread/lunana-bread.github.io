@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+html{
+    overscroll-behavior: none;
+}
+
 body{
     margin: 0;
     background-image: url(images/wall1.png);
@@ -12,6 +16,7 @@ body{
     gap: 10px;
     background-position: center;
     background-size: cover;
+    box-sizing: border-box;
 }
 
 .container{
