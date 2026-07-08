@@ -5,7 +5,8 @@ body{
     background-image: url(images/wall1.png);
     display: flex;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
+    flex-direction: column;
     box-sizing: border-box;
     padding: 10px;
     gap: 10px;
@@ -21,25 +22,20 @@ body{
     min-width: 0;
 }
 
-.container-link{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    min-width: 0;
+.container.link{
+    flex: 0;
+    min-width: 88px;
 }
 
-.container-row{
-    display: flex;
-    flex: 1;
-    gap: 10px;
-    min-width: 0;
+.container.row{
+    flex-direction: row;
 }
 
 .content{
     display: flex;
     gap: 10px;
     border: 1px solid rgba(255, 255, 255, 0.5);
-    flex: 1;
+    flex: 0;
     backdrop-filter: blur(10px);
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
@@ -108,7 +104,7 @@ body{
 }
 
 .links{
-    flex: 1;
+    flex: 0;
     display: flex;
 }
 
@@ -157,11 +153,7 @@ body{
     font-size: clamp(0.2vw, 0.75vw, 20px);
 }
 
-.text-small{
-    text-align: center;
-    text-decoration: none;
-    font-family: Kode Mono, sans-serif;
-    margin: 0;
+.text.small{
     font-size: clamp(0.2vw, 0.6vw, 20px);
 }
 
@@ -186,11 +178,6 @@ body{
 .screenshot:hover{
     scale: 1.02;
     border-radius: 10px;
-}
-
-.link{
-    height: 100%;
-    box-sizing: border-box;
 }
 
 .content-inside-discord{
@@ -267,10 +254,22 @@ body{
                 border-radius 0.2s ease;
     box-sizing: border-box;
     min-width: 0;
-    min-height: 0;
+    max-height: 350px;
 }
 
 .terminal:hover{
     scale: 1.02;
     border-radius: 10px;
+}
+
+.content.end{
+    max-height: 100px;
+}
+
+.foot{
+    color: white;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
