@@ -36,6 +36,7 @@ body{
 }
 
 .content{
+    display: flex;
     gap: 10px;
     border: 1px solid rgba(255, 255, 255, 0.5);
     flex: 1;
@@ -140,6 +141,7 @@ body{
     aspect-ratio: 1/1;
     transition: scale 0.3s ease,
                 border-radius 0.2s ease;
+    box-sizing: border-box;
 }
 
 .pfp:hover{
@@ -148,10 +150,19 @@ body{
 }
 
 .text{
+    text-align: center;
     text-decoration: none;
     font-family: Kode Mono, sans-serif;
     margin: 0;
-    font-size: clamp(0.5vw, 0.75vw, 20px);
+    font-size: clamp(0.2vw, 0.75vw, 20px);
+}
+
+.text-small{
+    text-align: center;
+    text-decoration: none;
+    font-family: Kode Mono, sans-serif;
+    margin: 0;
+    font-size: clamp(0.2vw, 0.6vw, 20px);
 }
 
 .text-large{
@@ -238,5 +249,28 @@ body{
 
 .website-button:hover{
     scale: 1.1;
+    border-radius: 10px;
+}
+
+.image-and-caption{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.terminal{
+    object-fit: cover;
+    object-position: left;
+    flex: 1;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: scale 0.3s ease,
+                border-radius 0.2s ease;
+    box-sizing: border-box;
+    min-width: 0;
+    min-height: 0;
+}
+
+.terminal:hover{
+    scale: 1.02;
     border-radius: 10px;
 }
