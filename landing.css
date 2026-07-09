@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+a{
+    color: white;
+    padding: 50px;
+    text-decoration: none;
+    font-family: "Kode Mono", monospace;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    transition: scale 0.2s ease,
+                background-color 0.2s ease,
+                border-radius 0.2s ease;
+}
+
+a:hover{
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    scale: 1.05;
+}
+
+body{
+    margin: 0;
+    background-image: url(./images/wall1.png);
+    height: 100vh;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}

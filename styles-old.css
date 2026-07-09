@@ -145,6 +145,11 @@ body{
     box-sizing: border-box;
 }
 
+.pfp.album{
+    height: 200%;
+    flex: 1;
+}
+
 .pfp:hover{
     scale: 1.03;
     border-radius: 10px;

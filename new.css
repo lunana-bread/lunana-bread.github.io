@@ -1,0 +1,9 @@
+html{
+    overscroll-behavior: none;
+}
+
+body{
+    box-sizing: border-box;
+    background-image: url(./images/wall1.png);
+    margin: 0;
+}
