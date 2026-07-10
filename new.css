@@ -1,9 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 html{
     overscroll-behavior: none;
 }
 
+p, h1{
+    margin: 0;
+    text-align: center;
+}
+
 body{
+    color: white;
+    font-family: "Kode Mono", monospace;
     box-sizing: border-box;
     background-image: url(./images/wall1.png);
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+.container{
+    gap: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    min-width: 0;
+}
+
+.container.foot{
+    flex-direction: row;
+    min-height: 200px;
+}
+
+.container.row{
+    flex-direction: row;
+}
+
+.container.small{
+    max-width: 20%;
+}
+
+.card{
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.card.row{
+    flex-direction: row;
+}
+
+.card.inside{
+    background-color: rgba(0, 0, 0, 0.2);
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.square{
+    display: flex;
+    aspect-ratio: 1/1;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.silly{
+    aspect-ratio: 1/1;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.square.small{
+    width: 25%;
+}
+
+.site{
+    width: 100%;
 }
