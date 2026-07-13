@@ -30,4 +30,12 @@ body{
     align-items: center;
     box-sizing: border-box;
     background-size: cover;
+    flex-direction: column;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
