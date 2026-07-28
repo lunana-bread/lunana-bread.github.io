@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+html{
+    overscroll-behavior: none;
+}
+
+body{
+    color: white;
+    display: flex;
+    background-image: url(./images/wall4.png);
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    background-position: center;
+    background-size: cover;
+    padding: 10px;
+    box-sizing: border-box;
+    gap: 10px;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* modifiers */
+
+.naomer{
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+.grid{
+    display: grid;
+}
+
+.border{
+    border: 0.5px solid rgba(255, 255, 255, 0.5);
+}
+
+.grow{
+    flex: 1;
+}
+
+.flex{
+    display: flex;
+}
+
+.column{
+    flex-direction: column;
+}
+
+.center{
+    align-items: center;
+    justify-content: center;
+}
+
+.hover{
+    transition: scale ease 0.3s,
+                border-radius ease 0.3s;
+}
+
+.hover:hover{
+    scale: 1.03;
+    border-radius: 10px;
+}
+
+.text.small{
+    font-size: clamp(5px, 1rem, 20px);
+}
+
+/* versions */
+
+.grid.ppl{
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.card.redirect{
+    padding: 50px;
+}
+
+.card.small{
+    max-height: 20%;
+}
+
+.container.small{
+    max-width: 500px;
+}
+
+.card.inside{
+    background-color: transparent;
+}
+
+
+/* content */
+
+.container{
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+.card{
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+    gap: 10px;
+}
+
+.text{
+    text-align: center;
+    color: white;
+    font-family: "Kode Mono", monospace;
+    margin: 0;
+}
+
+.pfp-container{
+    border-radius: 5px;
+    aspect-ratio: 1/1;
+    box-sizing: border-box;
+}
+
+.pfp{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
