@@ -16,7 +16,7 @@ body{
     box-sizing: border-box;
     gap: 10px;
     min-height: 100vh;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
 }
 
 a{
@@ -25,14 +25,23 @@ a{
 
 /* modifiers */
 
+.button{
+    width: 88px;
+    height: 31px;
+}
+
+.luna{
+    max-width: 200px;
+}
+
 .gap{
     gap: 10px;
 }
 
-/* .{ */
-    /* grid-row: span 2; */
-    /* grid-column: span 2; */
-/* } */
+.silly{
+    grid-row: span 2;
+    grid-column: span 2;
+}
 
 .grid{
     display: grid;
@@ -64,6 +73,16 @@ a{
                 border-radius ease 0.3s;
 }
 
+.hover-button{
+    transition: scale ease 0.3s,
+                border-radius ease 0.3s;
+}
+
+.hover-button:hover{
+    scale: 1.1;
+    border-radius: 10px;
+}
+
 .hover:hover{
     scale: 1.03;
     border-radius: 10px;
@@ -73,10 +92,14 @@ a{
     font-size: clamp(5px, 1rem, 20px);
 }
 
+.text.title{
+    font-size: clamp(5px, 1.5rem, 50px);
+}
+
 /* versions */
 
 .grid.ppl{
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 10px;
 }
