@@ -98,6 +98,44 @@ a{
 
 /* versions */
 
+.social.youtube{
+    background-color: #0f0f0f;
+}
+
+.social.spotify{
+    background-color: black;
+}
+
+.social.xbox{
+    background: linear-gradient(180deg, #77bb44, #139213);
+}
+
+.social.swag{
+    background-color: rgb(52, 48, 58);
+}
+
+.social.steam{
+    background: linear-gradient(0deg, #0353b4, #1b2838, #171A21);
+}
+
+.social.instagram{
+    background: radial-gradient(
+    circle farthest-corner at 28% 100%,
+    #fcdf8f 0%,
+    #fbd377 10%,
+    #fa8e37 22%,
+    #f73344 35%,
+    transparent 65%
+    ), 
+    linear-gradient(145deg, #3051f1 10%, #c92bb7 70%);
+}
+
+.grid.socials{
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
 .grid.ppl{
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -132,8 +170,13 @@ a{
     background-color: transparent;
 }
 
-
 /* content */
+
+.logo{
+    max-width: 25px;
+    aspect-ratio: 1/1;
+    box-sizing: border-box;
+}
 
 .container{
     gap: 10px;
@@ -156,13 +199,20 @@ a{
     margin: 0;
 }
 
+.emoji{
+    aspect-ratio: 1/1;
+    max-width: 1.5rem;
+}
+
 .pfp-container{
     border-radius: 5px;
     aspect-ratio: 1/1;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 .image-container{
+    overflow: hidden;
     border-radius: 5px;
     aspect-ratio: 16/9;
     box-sizing: border-box;
@@ -173,4 +223,8 @@ a{
     height: 100%;
     display: block;
     object-fit: cover;
+}
+
+.social{
+    padding: 15px;
 }
