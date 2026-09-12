@@ -3,10 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>/home/rluna/desktop</title>
+    <title>/home/rluna/mobile</title>
     <link rel="stylesheet" href="./styles.css">
+    <script src="popups.js" defer></script>
 </head>
 <body>
+    <div id="pop" class="popup invisible card border">
+        <p class="text">
+            test
+        </p>
+    </div>
     <div class="container flex grow column">
         <div class="card  small border flex">
             <div class="border  pfp-container luna">
@@ -18,8 +24,8 @@
                         /home/rluna/mobile
                     </h1>
                 </div>
-                <div class="card center inside flex grow  border">
-                    <p class="text small">
+                <div class="card center inside flex column grow  border">
+                    <p class="text">
                         hai im luna :3 <br> i do silly things :3
                     </p>
                 </div>
@@ -32,10 +38,10 @@
                 </p>
             </div>
             <div class="grid grow ppl">
-                <a class="pfp-container  border silly popup-parent" href="./silly-mobile.html">
+                <a class="popup-parent pfp-container  border silly" href="./silly-mobile.html">
                     <img class="image" src="./images/silly.webp">
                 </a>
-                <div class="pfp-container  border popup-parent">
+                <div onclick="sillyclick()" id="silly" class="pfp-container  border">
                     <img class="image" src="./images/silly.webp">
                 </div>
                 <div class="pfp-container  border">
@@ -77,7 +83,7 @@
                     silly screenshots :3
                 </p>
             </div>
-            <div class="grid grow screenshots">
+            <div class="grid grow twothree">
                 <div class="border image-container ">
                     <img class="image" src="./images/wall7.png">
                 </div>
@@ -104,90 +110,42 @@
                     fav games rn :3
                 </p>
             </div>
-            <div class="grid songs">
+            <div class="grid games gap">
                 <div class="flex column  gap">
-                    <div class="pfp-container border">
-                        <img class="image" src="./images/freak.jpg">
+                    <div class="image-container border">
+                        <img class="image" src="./images/Ultra.png">
                     </div>
-                    <div class="card inside grow border">
-                        <p class="text">
-                            sea is blue
-                        </p>
+                    <div class="card flex center inside grow border">
+                        <img class="image game" src="./images/ULTRAKILL.webp">
                     </div>
                 </div>
                 <div class="flex column  gap">
-                    <div class="pfp-container border">
-                        <img class="image" src="./images/bang.jpg">
+                    <div class="image-container border">
+                        <img class="image" src="./images/Beam.png">
                     </div>
-                    <div class="card inside grow border">
-                        <p class="text">
-                            sea is blue
-                        </p>
+                    <div class="card flex center inside grow border">
+                        <img class="image game" src="./images/Beamng.png">
                     </div>
                 </div>
                 <div class="flex column  gap">
-                    <div class="pfp-container border">
-                        <img class="image" src="./images/looping the rooms.png">
+                    <div class="image-container border">
+                        <img class="image" src="./images/Mine.png">
                     </div>
-                    <div class="card inside grow border">
-                        <p class="text">
-                            sea is blue
-                        </p>
+                    <div class="card flex center inside grow border">
+                        <img class="image game" src="./images/minecraft.svg">
                     </div>
                 </div>
                 <div class="flex column  gap">
-                    <div class="pfp-container border">
-                        <img class="image" src="./images/swim.jpg">
+                    <div class="image-container border">
+                        <img class="image" src="./images/VRC.png">
                     </div>
-                    <div class="card inside grow border">
-                        <p class="text">
-                            sea is blue
-                        </p>
-                    </div>
-                </div>
-                <div class="flex column  gap">
-                    <div class="pfp-container border">
-                        <img class="image" src="./images/redemption.jpg">
-                    </div>
-                    <div class="card inside grow border">
-                        <p class="text">
-                            sea is blue
-                        </p>
-                    </div>
-                </div>
-                <div class="flex column  gap">
-                    <div class="pfp-container border">
-                        <img class="image" src="./images/make me cry.webp">
-                    </div>
-                    <div class="card inside grow border">
-                        <p class="text">
-                            sea is blue
-                        </p>
-                    </div>
-                </div>
-                <div class="flex column  gap">
-                    <div class="pfp-container border">
-                        <img class="image" src="./images/to call.jpg">
-                    </div>
-                    <div class="card inside grow border">
-                        <p class="text">
-                            sea is blue
-                        </p>
-                    </div>
-                </div>
-                <div class="flex column  gap">
-                    <div class="pfp-container border">
-                        <img class="image" src="./images/paraly.webp">
-                    </div>
-                    <div class="card inside grow border">
-                        <p class="text">
-                            sea is blue
-                        </p>
+                    <div class="card flex center inside grow border">
+                        <img class="image game" src="./images/vrchat.webp">
                     </div>
                 </div>
             </div>
         </div>
-        <div class="card border grid socials ">
+        <div class="card border grid twothree ">
             <a class="card flex center border  social instagram" href="https://www.instagram.com/lunana_bread/">
                 <div class="logo">
                     <img class="image" src="./images/instagram.webp">
@@ -249,8 +207,11 @@
                         <img class="image" src="./images/freak.jpg">
                     </div>
                     <div class="card inside grow border">
-                        <p class="text">
-                            sea is blue
+                        <p class="text small">
+                            freaked out - RJ Pasin remix
+                        </p>
+                        <p class="text artist">
+                            Ptasinski, RJ Pasin
                         </p>
                     </div>
                 </div>
@@ -259,8 +220,11 @@
                         <img class="image" src="./images/bang.jpg">
                     </div>
                     <div class="card inside grow border">
-                        <p class="text">
-                            sea is blue
+                        <p class="text small">
+                            Bang Bang Bang - lil yappa/minus b remix
+                        </p>
+                        <p class="text artist">
+                            lil yappa, BBpanzu
                         </p>
                     </div>
                 </div>
@@ -269,8 +233,11 @@
                         <img class="image" src="./images/looping the rooms.png">
                     </div>
                     <div class="card inside grow border">
-                        <p class="text">
-                            sea is blue
+                        <p class="text small">
+                            Looping the Rooms
+                        </p>
+                        <p class="text artist">
+                            rusino, Hatsune Miku
                         </p>
                     </div>
                 </div>
@@ -279,8 +246,11 @@
                         <img class="image" src="./images/swim.jpg">
                     </div>
                     <div class="card inside grow border">
-                        <p class="text">
-                            sea is blue
+                        <p class="text small">
+                            Swim (bass boosted) [Feat. Chase Atlantic]
+                        </p>
+                        <p class="text artist">
+                            bass boosted, Chase Atlantic
                         </p>
                     </div>
                 </div>
@@ -289,8 +259,11 @@
                         <img class="image" src="./images/redemption.jpg">
                     </div>
                     <div class="card inside grow border">
-                        <p class="text">
-                            sea is blue
+                        <p class="text small">
+                            Redemption (feat. Nemzzz)
+                        </p>
+                        <p class="text artist">
+                            Kidwild, Nemzzz
                         </p>
                     </div>
                 </div>
@@ -299,8 +272,11 @@
                         <img class="image" src="./images/make me cry.webp">
                     </div>
                     <div class="card inside grow border">
-                        <p class="text">
-                            sea is blue
+                        <p class="text small">
+                            make me cry
+                        </p>
+                        <p class="text artist">
+                            waale, Mvrphid
                         </p>
                     </div>
                 </div>
@@ -309,8 +285,11 @@
                         <img class="image" src="./images/to call.jpg">
                     </div>
                     <div class="card inside grow border">
-                        <p class="text">
-                            sea is blue
+                        <p class="text small">
+                            to call.
+                        </p>
+                        <p class="text artist">
+                            crier, 2003
                         </p>
                     </div>
                 </div>
@@ -319,8 +298,11 @@
                         <img class="image" src="./images/paraly.webp">
                     </div>
                     <div class="card inside grow border">
-                        <p class="text">
-                            sea is blue
+                        <p class="text small">
+                            Paralyzer
+                        </p>
+                        <p class="text artist">
+                            Finger Eleven
                         </p>
                     </div>
                 </div>
@@ -334,7 +316,9 @@
             </div>
             <div class="flex row gap">
                 <div class="flex column gap">
-                    <a class="button -button" href="https://squirrelz.xyz" title="squirrelz"><img src="https://squirrelz.xyz/squirrelz.png"></a>
+                    <a class="button -button crisp-edges" href="https://squirrelz.xyz" title="squirrelz"><img class="image" src="https://squirrelz.xyz/squirrelz.png"></a>
+                    <a class="button -button crisp-edges" href="https://potiontrans.neocities.org/"><img class="image" src="https://potiontrans.neocities.org/button1.gif"></a>
+                    <a class="button -button crisp-edges" href="https://aomeix.nekoweb.org/"><img class="image" src="https://aomeix.nekoweb.org/blinkies/aomeix_steampunk.png"></a>
                 </div>
                 <div class="flex column gap grow">
                     <div class="card inside  border">
@@ -344,9 +328,14 @@
                     </div>
                     <div class="card flex center inside  column border">
                         <p class="text">
-                            &lta href="https://lunana-bread.github.io/" title="lunana-bread"&gt&ltimg src="https://lunana-bread.github.io/images/lunana-bread.png"&gt&lt/a&gt 
+                            &lta href="https://lunana-bread.github.io/" title="lunana-bread"&gt&ltimg src="https://lunana-bread.github.io/images/lunana-bread.png"&gt&lt/a&gt
                         </p>
-                        <a class="button -button" href="https://lunana-bread.github.io/" title="lunana-bread"><img src="https://lunana-bread.github.io/images/lunana-bread.png"></a> 
+                        <a class="button -button crisp-edges" href="https://lunana-bread.github.io/" title="lunana-bread"><img src="./images/lunana-bread.png"></a>
+                    </div>
+                    <div class="card center inside  border column">
+                        <p class="text">
+                            thanks to gustavogala1. on discord for the button &lt3
+                        </p>
                     </div>
                 </div>
             </div>

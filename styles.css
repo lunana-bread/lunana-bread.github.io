@@ -2,6 +2,7 @@
 
 html{
     overscroll-behavior: none;
+    font-size: 16px;
 }
 
 body{
@@ -25,9 +26,13 @@ a{
 
 /* modifiers */
 
+.crisp-edges {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
 .button{
-    width: 88px;
-    height: 31px;
+    max-width: 88px;
 }
 
 .luna{
@@ -89,14 +94,23 @@ a{
 }
 
 .text.small{
-    font-size: clamp(5px, 1rem, 20px);
+    font-size: clamp(5px, 0.75rem, 20px);
+}
+
+.text.artist{
+    font-size: clamp(5px, 0.55rem, 10px);
 }
 
 .text.title{
-    font-size: clamp(5px, 1.5rem, 50px);
+    font-size: clamp(5px, 1.75rem, 32px);
 }
 
 /* versions */
+
+.image.game{
+    width: auto;
+    height: 2.75vh;
+}
 
 .social.youtube{
     background-color: #0f0f0f;
@@ -130,21 +144,20 @@ a{
     linear-gradient(145deg, #3051f1 10%, #c92bb7 70%);
 }
 
-.grid.socials{
+.grid.twothree{
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
+}
+
+.grid.games{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
 .grid.ppl{
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 10px;
-}
-
-.grid.screenshots{
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
     gap: 10px;
 }
 
@@ -170,7 +183,24 @@ a{
     background-color: transparent;
 }
 
+.popup-parent{
+    position: relative;
+}
+
+.visible{
+    opacity: 100;
+}
+
+.invisible{
+    opacity: 0;
+}
+
 /* content */
+
+.popup{
+    position: absolute;
+    z-index: 999;
+}
 
 .logo{
     max-width: 25px;
