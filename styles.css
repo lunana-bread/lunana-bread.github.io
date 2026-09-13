@@ -3,16 +3,14 @@
 html{
     overscroll-behavior: none;
     font-size: 16px;
+    background-color: black;
 }
 
 body{
     color: white;
     display: flex;
-    background-image: url(./images/wall4.png);
     width: 100vw;
     margin: 0;
-    background-position: center;
-    background-size: cover;
     padding: 10px;
     box-sizing: border-box;
     gap: 10px;
@@ -20,11 +18,45 @@ body{
     padding-bottom: 50px;
 }
 
+body::before{
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./images/space.png);
+    animation: bgfade 2s ease-out
+}
+
+@keyframes bgfade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
 a{
     text-decoration: none;
 }
 
 /* modifiers */
+
+.fade{
+    animation: fade 1.5s ease-out
+}
+
+@keyframes fade{
+    0%{
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
 
 .crisp-edges {
   image-rendering: -webkit-optimize-contrast;
