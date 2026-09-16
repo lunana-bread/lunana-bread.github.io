@@ -43,21 +43,6 @@ a{
 
 /* modifiers */
 
-.fade{
-    animation: fade 1.5s ease-out
-}
-
-@keyframes fade{
-    0%{
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    100%{
-        opacity: 1;
-        transform: translateY(0px);
-    }
-}
-
 .crisp-edges {
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
@@ -68,7 +53,7 @@ a{
 }
 
 .luna{
-    max-width: 200px;
+    max-width: 30%;
 }
 
 .gap{
@@ -86,6 +71,29 @@ a{
 
 .border{
     border: 0.5px solid rgba(255, 255, 255, 0.5);
+}
+
+.fade{
+    animation: fade 2.5s ease-out;
+}
+
+@keyframes fade{
+    0%{
+        opacity: 0;
+        transform: translateY(10px);
+        border-color: transparent;
+    }
+    50%{
+        border-color: transparent;
+    }
+    75%{
+        border-color: rgba(255, 45, 154, 0.3);
+    }
+    100%{
+        border-color: rgba(255, 255, 255, 0.5);
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 
 .grow{
@@ -140,8 +148,11 @@ a{
 /* versions */
 
 .image.game{
-    width: auto;
-    height: 2.75vh;
+    min-width: 0;
+    min-height: 0;
+    max-width: 100%;
+    max-height: 2.75vh;
+    object-fit: contain;
 }
 
 .social.youtube{
@@ -189,7 +200,7 @@ a{
 
 .grid.ppl{
     grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 10px;
 }
 
@@ -215,23 +226,46 @@ a{
     background-color: transparent;
 }
 
-.popup-parent{
-    position: relative;
+.visible{
+    opacity: 1;
 }
 
-.visible{
-    opacity: 100;
+.visibleanim{
+    animation: visibleanim 0.5s ease-out;
+}
+
+@keyframes visibleanim{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 .invisible{
     opacity: 0;
 }
 
+.invisibleanim{
+    animation: invisibleanim 0.5s ease-out;
+}
+
+@keyframes invisibleanim{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
 /* content */
 
 .popup{
-    position: absolute;
+    position: fixed;
     z-index: 999;
+    width: 15vw;
 }
 
 .logo{
@@ -281,6 +315,8 @@ a{
 }
 
 .image{
+    min-width: 0;
+    min-height: 0;
     width: 100%;
     height: 100%;
     display: block;
