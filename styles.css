@@ -86,9 +86,6 @@ a{
     50%{
         border-color: transparent;
     }
-    75%{
-        border-color: rgba(255, 45, 154, 0.3);
-    }
     100%{
         border-color: rgba(255, 255, 255, 0.5);
         opacity: 1;
@@ -167,8 +164,8 @@ a{
     background: linear-gradient(180deg, #77bb44, #139213);
 }
 
-.social.swag{
-    background-color: rgb(52, 48, 58);
+.social.discord{
+    background-color: #5865F2;
 }
 
 .social.steam{
