@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
 html{
     overscroll-behavior: none;
     font-size: 16px;
@@ -184,10 +182,14 @@ a{
     linear-gradient(145deg, #3051f1 10%, #c92bb7 70%);
 }
 
+.grid.screenshots{
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
 .grid.twothree{
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
 }
 
 .grid.games{
@@ -198,13 +200,11 @@ a{
 .grid.ppl{
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: 10px;
 }
 
 .grid.songs{
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 10px;
 }
 
 .card.redirect{
